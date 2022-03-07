@@ -15,7 +15,9 @@ import { RouterLink, RouterView } from 'vue-router'
     <!-- Menu de navegación -->
     <nav>
       <RouterLink class="inline mx-2 text-gray-500" to="/">Inicio</RouterLink>
-      <RouterLink class="inline mx-2 text-gray-500" to="/incidences">Tabla de Incidencias</RouterLink>
+      <RouterLink class="inline mx-2 text-gray-500" to="/incidences">Incidencias</RouterLink>
+      <RouterLink class="inline mx-2 text-gray-500" to="/problems">Problemas</RouterLink>
+      <RouterLink class="inline mx-2 text-gray-500" to="/solutions">Soluciones</RouterLink>
     </nav>
   </header>
 

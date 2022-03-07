@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 import { ref, onMounted } from 'vue';
 import AssistantChat from '../../components/assistant/AssistantChat.vue';
+import NewIncidenceSolution from '../../components/assistant/NewIncidenceSolution.vue';
 
 let soluciones = [1, 1, 1, 1, 1];
 
@@ -16,7 +17,7 @@ onMounted(() => {
   <div class="relative w-full h-auto flex flex-wrap justify-center">
     <!-- Titulo -->
     <div class="w-full h-auto text-center py-3">
-      <h1 class="text-2xl">Incidencia #{{id}} | Asistente Técnico</h1>
+      <h1 class="text-2xl">Incidencia #{{ id }} | Asistente Técnico</h1>
     </div>
 
     <!-- Incidencia -->
@@ -48,34 +49,26 @@ onMounted(() => {
             </p>
           </div>
         </div>
+
+        <!-- Redactar solucion -->
+        <div class="w-full p-3">
+          <RouterLink to="/solutions/new" class="bg-gray-600 text-white rounded-lg px-3 py-1 mr-3">Redactar solución</RouterLink>
+        </div>
+
         <!-- Posibles soluciones -->
         <div class="w-full p-3">
           <h3 class="mb-3">Soluciones</h3>
-          <div v-for="(item, index) in soluciones" :key="index">
-            <div class="p-3 border-2 border-solid border-gray-200">
-              <div class>
-                <p>Llegar</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quod voluptatum fugit in molestiae. Illo maxime corrupti minima ullam ipsum. Nostrum quas fuga repellat minus expedita magni excepturi similique ratione?</p>
-              </div>
-            </div>
-          </div>
+          <NewIncidenceSolution v-for="(item, index) in soluciones" :key="index" />
         </div>
-
-        <!-- Redactar solucion -->
-        <div class="w-full p-3"></div>
       </div>
     </div>
 
     <!-- Secundario -->
     <div class="sticky top-0 w-3/12 h-screen">
       <AssistantChat />
-      <RouterLink class="w-full py-2 bg-gray-200 flex justify-center" to="/incidences">
-        <div>
-          <div class="sticky w-full">
-            Regresar
-            <i class="fas fa-arrow-left"></i>
-          </div>
-        </div>
+      <RouterLink to="/incidences" class="w-full py-2 bg-gray-200 whitespace-pre-wrap flex justify-center items-center">
+        Regresar
+        <i class="fas fa-arrow-left"></i>
       </RouterLink>
     </div>
   </div>

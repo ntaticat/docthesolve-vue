@@ -1,16 +1,17 @@
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { RouterLink } from 'vue-router'
-
-const reporteVerMas = ref(false);
-
-function toggleReporteVerMas() {
-  reporteVerMas.value = !reporteVerMas.value;
-}
-
-onMounted(() => {
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({
+  data() {
+    return {
+      reporteVer: false
+    }
+  },
+  methods: {
+    toggleReporteVer() {
+      this.reporteVer = !this.reporteVer;
+    }
+  }
 })
-
 </script>
 
 <template>
@@ -24,17 +25,17 @@ onMounted(() => {
       <hr class="w-full border-b-2 border-solid border-gray-200" />
     </div>
     <!-- Descripción corta -->
-    <div v-if="!reporteVerMas" class="">
+    <div v-if="!reporteVer">
       <div class="w-full p-3 text-center">
         <p>Descripción breve del reporte...</p>
       </div>
-      <button button class="w-full py-2 bg-gray-200" v-on:click="toggleReporteVerMas" >
+      <button button class="w-full py-2 bg-gray-200" v-on:click="toggleReporteVer">
         Ver más información
         <i class="fas fa-arrow-down"></i>
       </button>
     </div>
     <!-- Descripción y botón para realizar acción -->
-    <div v-if="reporteVerMas" class="">
+    <div v-if="reporteVer">
       <div class="w-full p-3">
         <div class="w-full mb-3 text-justify">
           <p>Información detallada del problema...</p>
@@ -45,12 +46,16 @@ onMounted(() => {
           </p>
         </div>
         <div class="w-full flex justify-start">
-          <RouterLink to="/incidences/1"
+          <RouterLink
+            to="/incidences/1"
             class="px-2 py-1 bg-gray-700 text-gray-100 rounded-lg"
           >Ver reporte</RouterLink>
         </div>
       </div>
-      <button v-on:click="toggleReporteVerMas" class="w-full py-2 bg-gray-200">Mostrar menos <i class="fas fa-arrow-up"></i></button>
+      <button v-on:click="toggleReporteVer" class="w-full py-2 bg-gray-200">
+        Mostrar menos
+        <i class="fas fa-arrow-up"></i>
+      </button>
     </div>
   </div>
 </template>

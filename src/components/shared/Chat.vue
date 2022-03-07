@@ -41,6 +41,26 @@ onMounted(() => {
           class="rounded-br-xl w-3/4 rounded-t-xl py-2 px-3 text-sm h-auto bg-gray-500 text-white"
         >Globo de texto num 2</div>
       </div>
+      <div class="px-2 py-1 w-full h-auto flex flex-wrap justify-end">
+        <div
+          class="rounded-bl-xl w-3/4 rounded-t-xl py-2 px-3 text-sm h-auto bg-gray-500 text-white"
+        >Globo de texto num 1</div>
+      </div>
+      <div class="px-2 py-1 w-full h-auto flex flex-wrap justify-start">
+        <div
+          class="rounded-br-xl w-3/4 rounded-t-xl py-2 px-3 text-sm h-auto bg-gray-500 text-white"
+        >Globo de texto num 2</div>
+      </div>
+      <div class="px-2 py-1 w-full h-auto flex flex-wrap justify-end">
+        <div
+          class="rounded-bl-xl w-3/4 rounded-t-xl py-2 px-3 text-sm h-auto bg-gray-500 text-white"
+        >Globo de texto num 1</div>
+      </div>
+      <div class="px-2 py-1 w-full h-auto flex flex-wrap justify-start">
+        <div
+          class="rounded-br-xl w-3/4 rounded-t-xl py-2 px-3 text-sm h-auto bg-gray-500 text-white"
+        >Globo de texto num 2</div>
+      </div>
     </div>
 
     <div class="w-full flex flex-nowrap border-t-2 border-solid border-gray-200 py-2 px-2">
