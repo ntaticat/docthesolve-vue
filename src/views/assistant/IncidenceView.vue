@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import { ref, onMounted } from 'vue';
-import AssistantChat from '../../components/assistant/AssistantChat.vue';
 import NewIncidenceSolution from '../../components/assistant/NewIncidenceSolution.vue';
+import Header from '@/components/assistant/Header.vue';
 
 let soluciones = [1, 1, 1, 1, 1];
 
@@ -14,6 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <Header />
   <div class="relative w-full h-auto flex flex-wrap justify-center">
     <!-- Titulo -->
     <div class="w-full h-auto text-center py-3">
@@ -21,8 +22,8 @@ onMounted(() => {
     </div>
 
     <!-- Incidencia -->
-    <div class="w-7/12 h-auto">
-      <div class="w-full border-2 border-solid border-gray-300">
+    <div class="w-full lg:w-7/12 h-auto p-3">
+      <div class="w-full border-2 border-solid border-gray-300 rounded-lg overflow-hidden">
         <!-- Nombre -->
         <div class="w-full p-3">
           <div class="w-full py-3 flex flex-wrap justify-between items-baseline">
@@ -64,13 +65,13 @@ onMounted(() => {
     </div>
 
     <!-- Secundario -->
-    <div class="sticky top-0 w-3/12 h-screen">
+    <!-- <div class="hidden lg:block sticky top-0 w-3/12 h-screen">
       <AssistantChat />
       <RouterLink to="/incidences" class="w-full py-2 bg-gray-200 whitespace-pre-wrap flex justify-center items-center">
         Regresar
         <i class="fas fa-arrow-left"></i>
       </RouterLink>
-    </div>
+    </div> -->
   </div>
 </template>
 

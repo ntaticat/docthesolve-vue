@@ -15,7 +15,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="w-full border-2 border-solid border-gray-300">
+  <div class="w-full border-2 border-solid border-gray-300 overflow-hidden rounded-lg last:mb-0 mb-3">
     <!-- Titulo y numero de reporte -->
     <div class="w-full p-3">
       <div class="w-full py-3 flex flex-wrap justify-between items-baseline">

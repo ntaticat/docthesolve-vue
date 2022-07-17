@@ -5,7 +5,7 @@ import { marked } from 'marked';
 export default defineComponent({
   data() {
     return {
-      markdown: "# Hola Mundo"
+      markdown: ""
     }
   },
   computed: {
@@ -14,7 +14,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    this.markdown
+    this.markdown = "# Hola Mundo";
   }
 })
 
@@ -22,20 +22,20 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="w-full h-screen p-3 flex flex-nowrap items-stretch bg-gray-300">
+  <div class="w-full h-auto lg:h-screen flex flex-wrap lg:flex-nowrap content-start lg:items-stretch">
     <textarea 
       v-model="markdown"
-      class="resize-none w-full h-full border-2 border-solid border-gray-400  outline-gray-600"
+      class="resize-none w-full h-[50vh] lg:h-full p-1  mx-3 border-2 border-solid border-gray-400 outline-gray-600"
     ></textarea>
     <div
       v-if="markdown"
       v-html="markdownToHtml"
-      class="w-full border-2 border-solid border-gray-500 p-3 prose prose-base"
+      class="w-full h-auto p-3 prose prose-sm max-w-none"
     ></div>
     <div
       v-if="!markdown"
-      class="w-full border-2 border-solid border-gray-500 p-3"
-    >Nothing yet...</div>
+      class="w-full h-auto p-3 prose prose-sm max-w-none"
+    >Nada escrito aún...</div>
   </div>
 </template>
 

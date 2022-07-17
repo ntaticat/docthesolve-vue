@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <ul class="">
+  <ul class="p-3">
     <NewIncidenceItem v-for="(item, index) in incidenceArr" :key="index"></NewIncidenceItem>
   </ul>
 </template>
