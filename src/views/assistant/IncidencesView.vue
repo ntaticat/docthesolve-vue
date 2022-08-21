@@ -17,6 +17,13 @@ export default defineComponent({
     signalr.on('ReceiveMessage', (message) => {
       console.log("MENSAJE RECIBIDO DE SIGNALR");
       console.log(message);
+      const element = document.getElementById("valor222");
+
+      if (element) {
+        element.innerHTML += `
+          <h1>${ message.title }</h1>
+        `;
+      }
     });
   },
   data() {
@@ -34,7 +41,7 @@ export default defineComponent({
 
 <template>
   <Header />
-  
+
   <div class="w-full h-full flex flex-wrap justify-center">
     <div class="w-full text-center py-3">
       <h1 class="text-2xl">Tabla de Incidencias | Asistente Técnico</h1>
@@ -42,6 +49,7 @@ export default defineComponent({
 
     <!-- <div class="w-3/12"></div> -->
     <div class="w-full md:w-7/12">
+      <div id="valor222"></div>
       <NewIncidenceList />
     </div>
 
