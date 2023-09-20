@@ -1,52 +1,57 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: () => import('../views/assistant/MainView.vue')
+      path: "/",
+      name: "home",
+      component: () => import("../views/agent/MainView.vue"),
     },
     {
-      path: '/incidences',
-      name: 'Incidencias',
+      path: "/tickets",
+      name: "Tickets",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/assistant/IncidencesView.vue')
+      component: () => import("../views/agent/TicketsView.vue"),
     },
     {
-      path: '/incidences/:id',
-      name: 'Incidencia',
-      component: () => import('../views/assistant/IncidenceView.vue')
+      path: "/tickets/:id",
+      name: "Ticket",
+      component: () => import("../views/agent/TicketView.vue"),
     },
     {
-      path: '/problems',
-      name: 'Problemas',
-      component: () => import('../views/assistant/ProblemsView.vue')
+      path: "/problems",
+      name: "Problemas",
+      component: () => import("../views/agent/ProblemsView.vue"),
     },
     {
-      path: '/problems/:id',
-      name: 'Problema',
-      component: () => import('../views/assistant/ProblemView.vue')
+      path: "/problems/:id",
+      name: "Problema",
+      component: () => import("../views/agent/ProblemView.vue"),
     },
     {
-      path: '/solutions',
-      name: 'Soluciones',
-      component: () => import('../views/assistant/SolutionsView.vue')
+      path: "/problems/new",
+      name: "Registrar Problema",
+      component: () => import("../views/agent/NewSolutionView.vue"),
     },
     {
-      path: '/solutions/:id',
-      name: 'Solucion',
-      component: () => import('../views/assistant/SolutionView.vue')
+      path: "/solutions",
+      name: "Soluciones",
+      component: () => import("../views/agent/SolutionsView.vue"),
     },
     {
-      path: '/solutions/new',
-      name: 'Nueva Solucion',
-      component: () => import('../views/assistant/NewSolutionView.vue')
-    }
-  ]
-})
+      path: "/solutions/:id",
+      name: "Solución",
+      component: () => import("../views/agent/SolutionView.vue"),
+    },
+    {
+      path: "/solutions/new",
+      name: "Registrar Solución",
+      component: () => import("../views/agent/NewSolutionView.vue"),
+    },
+  ],
+});
 
-export default router
+export default router;

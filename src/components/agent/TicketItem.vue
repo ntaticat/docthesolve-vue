@@ -15,7 +15,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="w-full border-2 border-solid border-gray-300 overflow-hidden rounded-lg last:mb-0 mb-3">
+  <li class="w-full border-2 border-solid border-gray-300 overflow-hidden rounded-lg last:mb-0 mb-3">
     <!-- Titulo y numero de reporte -->
     <div class="w-full p-3">
       <div class="w-full py-3 flex flex-wrap justify-between items-baseline">
@@ -46,10 +46,7 @@ export default defineComponent({
           </p>
         </div>
         <div class="w-full flex justify-start">
-          <RouterLink
-            to="/incidences/1"
-            class="px-2 py-1 bg-gray-700 text-gray-100 rounded-lg"
-          >Ver reporte</RouterLink>
+          <RouterLink to="/tickets/1" class="px-2 py-1 bg-gray-700 text-gray-100 rounded-lg">Ver reporte</RouterLink>
         </div>
       </div>
       <button v-on:click="toggleReporteVer" class="w-full py-2 bg-gray-200">
@@ -57,8 +54,7 @@ export default defineComponent({
         <i class="fas fa-arrow-up"></i>
       </button>
     </div>
-  </div>
+  </li>
 </template>
 
-<style>
-</style>
+<style></style>

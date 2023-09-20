@@ -1,17 +1,16 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import Header from "@/components/assistant/Header.vue";
+import Header from "@/components/agent/Header.vue";
 
 export default defineComponent({
-    components: { Header }
+  components: { Header }
 });
 </script>
 
 <template>
   <Header />
-  <div></div>
+  <h1>Solución #23</h1>
 </template>
 
 <style lang="">
-  
 </style>

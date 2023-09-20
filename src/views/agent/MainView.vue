@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import Header from '@/components/agent/Header.vue';
 import { ref, onMounted } from 'vue';
-import Header from '@/components/assistant/Header.vue';
 
 onMounted(() => {
 })
@@ -14,5 +14,4 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
-</style>
+<style></style>

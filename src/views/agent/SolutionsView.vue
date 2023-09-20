@@ -1,9 +1,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import Header from "@/components/assistant/Header.vue";
+import Header from "@/components/agent/Header.vue";
 
 export default defineComponent({
-    components: { Header }
+  components: { Header }
 });
 </script>
 

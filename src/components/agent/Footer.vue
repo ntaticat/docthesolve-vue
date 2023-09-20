@@ -1,10 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
-import ProblemItem from './ProblemItem.vue';
+import { RouterLink, RouterView } from 'vue-router';
 
 export default defineComponent({
-  components: { ProblemItem },
   data() {
     return {
       problemsArr: [1, 1, 1, 1, 1, 1, 1]

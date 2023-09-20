@@ -1,9 +1,10 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import Header from "@/components/assistant/Header.vue";
+import ProblemList from "@/components/agent/ProblemList.vue";
+import Header from "@/components/agent/Header.vue";
 
 export default defineComponent({
-    components: { Header }
+  components: { ProblemList, Header }
 });
 </script>
 
@@ -11,12 +12,12 @@ export default defineComponent({
   <Header />
   <div class="w-full h-full flex flex-wrap justify-center">
     <div class="w-full text-center py-3">
-      <h1 class="text-2xl">Problema detalle | Asistente Técnico</h1>
+      <h1 class="text-2xl">Tabla de Problemas | Asistente Técnico</h1>
     </div>
 
     <!-- <div class="w-3/12"></div> -->
     <div class="w-7/12">
-      <p>Info</p>
+      <ProblemList />
     </div>
 
     <!-- Chat -->

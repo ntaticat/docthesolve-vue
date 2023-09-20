@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import { ref, onMounted } from 'vue';
-import NewIncidenceSolution from '../../components/assistant/NewIncidenceSolution.vue';
-import Header from '@/components/assistant/Header.vue';
+import Header from '@/components/agent/Header.vue';
 
 let soluciones = [1, 1, 1, 1, 1];
 
@@ -53,27 +52,27 @@ onMounted(() => {
 
         <!-- Redactar solucion -->
         <div class="w-full p-3">
-          <RouterLink to="/solutions/new" class="bg-gray-600 text-white rounded-lg px-3 py-1 mr-3">Redactar solución</RouterLink>
-        </div>
+        <RouterLink to="/solutions/new" class="bg-gray-600 text-white rounded-lg px-3 py-1 mr-3">Redactar solución
+        </RouterLink>
+      </div>
 
-        <!-- Posibles soluciones -->
-        <div class="w-full p-3">
+      <!-- Posibles soluciones -->
+      <div class="w-full p-3">
           <h3 class="mb-3">Soluciones</h3>
-          <NewIncidenceSolution v-for="(item, index) in soluciones" :key="index" />
+          <!-- <NewIncidenceSolution v-for="(item, index) in soluciones" :key="index" /> -->
         </div>
       </div>
     </div>
 
     <!-- Secundario -->
     <!-- <div class="hidden lg:block sticky top-0 w-3/12 h-screen">
-      <AssistantChat />
-      <RouterLink to="/incidences" class="w-full py-2 bg-gray-200 whitespace-pre-wrap flex justify-center items-center">
-        Regresar
-        <i class="fas fa-arrow-left"></i>
-      </RouterLink>
-    </div> -->
+          <AssistantChat />
+          <RouterLink to="/incidences" class="w-full py-2 bg-gray-200 whitespace-pre-wrap flex justify-center items-center">
+            Regresar
+            <i class="fas fa-arrow-left"></i>
+          </RouterLink>
+        </div> -->
   </div>
 </template>
 
-<style>
-</style>
+<style></style>
